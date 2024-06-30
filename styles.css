@@ -108,6 +108,21 @@ body {
     100% { transform: translateY(100vh); }
 }
 
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(-20deg); }
+    40% { transform: rotate(10deg); }
+    60% { transform: rotate(-10deg); }
+    80% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.wave {
+    display: inline-block;
+    animation: wave 2s ease-in-out;
+}
+
+
 .project {
     opacity: 0;
     transform: translateY(20px);
