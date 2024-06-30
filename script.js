@@ -26,11 +26,7 @@ function createSnowflake() {
 
     // Set random duration for fall animation
     const fallDuration = Math.random() * 3 + 7 + 's';
-    snowflake.style.animationDuration = fallDuration;
-
-    // Set random duration for rotation animation
-    const rotateDuration = Math.random() * 5 + 5 + 's';
-    snowflake.style.setProperty('--rotate-duration', rotateDuration);
+    snowflake.style.animationDuration = fallDuration + ', ' + (Math.random() * 5 + 5) + 's';
 
     document.body.appendChild(snowflake);
 
