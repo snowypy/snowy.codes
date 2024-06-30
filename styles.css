@@ -42,7 +42,7 @@ body {
     user-select: none;
     pointer-events: none;
     z-index: 1000;
-    animation: snow linear infinite, rotate linear infinite;
+    animation: snow linear infinite, rotate 5s linear infinite;
 }
 
 @keyframes snow {
