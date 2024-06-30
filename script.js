@@ -15,6 +15,7 @@ document.getElementById('collapse-button').addEventListener('click', function() 
         document.getElementById('detailed-view').classList.add('hidden');
         document.getElementById('basic-view').classList.remove('hidden');
         document.getElementById('basic-view').classList.add('fade-in');
+        document.getElementById('basic-view').classList.add('visible');
     }, 1000);
 });
 
