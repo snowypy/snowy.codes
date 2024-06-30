@@ -1,7 +1,16 @@
+:root {
+    --primary-color: #ff6600;
+    --secondary-color: #aaa;
+    --background-color: #121212;
+    --container-bg-color: rgba(18, 18, 18, 0.8);
+    --content-bg-color: rgba(30, 30, 30, 0.9);
+    --icon-bg-color: rgba(40, 40, 40, 0.9);
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #121212;
+    background-color: var(--background-color);
     color: #fff;
     height: 100vh;
     display: flex;
@@ -18,7 +27,7 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    background: rgba(18, 18, 18, 0.8);
+    background: var(--container-bg-color);
     backdrop-filter: blur(5px);
     text-align: center;
     opacity: 0;
@@ -61,7 +70,7 @@ body {
 }
 
 .skills, .tools {
-    background: rgba(30, 30, 30, 0.9);
+    background: var(--content-bg-color);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -76,7 +85,7 @@ body {
 }
 
 .icon {
-    background: rgba(40, 40, 40, 0.9);
+    background: var(--icon-bg-color);
     padding: 10px;
     border-radius: 5px;
     margin: 5px;
@@ -122,7 +131,6 @@ body {
     animation: wave 2s ease-in-out;
 }
 
-
 .project {
     opacity: 0;
     transform: translateY(20px);
@@ -148,7 +156,7 @@ body {
     margin-top: 20px;
     width: 100%;
     max-width: 800px;
-    background: rgba(30, 30, 30, 0.9);
+    background: var(--content-bg-color);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -170,7 +178,6 @@ body {
     width: 60px;
     height: 60px;
     margin-right: 20px;
-    background: url('/mnt/data/image.png') no-repeat center center;
     background-size: cover;
     border-radius: 50%;
     border: 2px solid #fff;
@@ -188,17 +195,17 @@ body {
 
 .project-content p {
     margin: 5px 0;
-    color: #aaa;
+    color: var(--secondary-color);
 }
 
 .project-content a {
-    color: #317ff5;
+    color: var(--secondary-color);
     text-decoration: none;
-    transition: color 1s ease;
+    transition: color 0.3s ease;
 }
 
 .project-content a:hover {
-    color: #00ff73;  /* Example color for hover state */
+    color: #317ff5; /* Blue color on hover */
 }
 
 .project-content a.underline:hover {
@@ -211,11 +218,15 @@ body {
 
 .project-links a {
     margin-right: 10px;
-    color: #aaa;
+    color: var(--secondary-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .project-links a:hover {
-    color: #ff6600;  /* Example color for hover state */
+    color: var(--primary-color); /* Example color for hover state */
+}
+
+.project-content a.hovered {
+    color: #317ff5 !important; /* Ensure the color remains blue during hover */
 }

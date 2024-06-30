@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="basic-view" class="container visible">
-        <h1>Hey, I'm Snowy <span class="wave">👋</span></h1>
+    <div id="basic-view" class="container visible" aria-live="polite">
+        <h1>Hey, I'm Snowy <span class="wave" aria-hidden="true">👋</span></h1>
         <p>I'm a Software Developer!</p>
-        <button id="expand-button">Advanced View</button>
+        <button id="expand-button" aria-label="Switch to Advanced View">Advanced View</button>
     </div>
 
-    <div id="detailed-view" class="container hidden">
-        <h1>Hey, I'm Snowy <span class="wave">👋</span></h1>
+    <div id="detailed-view" class="container hidden" aria-live="polite">
+        <h1>Hey, I'm Snowy <span class="wave" aria-hidden="true">👋</span></h1>
         <p>I'm a Software Developer!</p>
         <div class="skills-tools-container">
             <div class="skills">
@@ -53,7 +53,7 @@
             </div>
         </div>
         <div class="projects"></div>
-        <button id="collapse-button">Basic View</button>
+        <button id="collapse-button" aria-label="Switch to Basic View">Basic View</button>
     </div>
     <script src="script.js"></script>
 </body>
