@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    transition: opacity 1s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.wave {
+    animation: wave-animation 2s infinite;
+}
+
+@keyframes wave-animation {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(20deg); }
+}
+
+#expand-button, #collapse-button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.skills, .projects {
+    margin-top: 20px;
+}
+
+.snowflake {
+    position: fixed;
+    top: -10px;
+    color: #fff;
+    font-size: 1em;
+    user-select: none;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.snowflake {
+    color: var(--snow-color, #fff);
+    font-size: var(--snow-size, 1em);
+}
+
+body {
+    background-color: var(--background-color, #121212);
+}
+
+.project {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.project.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@keyframes snow {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
