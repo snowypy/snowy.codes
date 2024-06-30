@@ -1,17 +1,20 @@
 document.getElementById('expand-button').addEventListener('click', function() {
-    document.getElementById('basic-view').classList.add('hidden');
+    document.getElementById('basic-view').classList.add('fade-out');
     setTimeout(() => {
+        document.getElementById('basic-view').classList.add('hidden');
         document.getElementById('detailed-view').classList.remove('hidden');
+        document.getElementById('detailed-view').classList.add('fade-in');
         document.getElementById('detailed-view').classList.add('visible');
     }, 1000);
 });
 
 document.getElementById('collapse-button').addEventListener('click', function() {
-    document.getElementById('detailed-view').classList.add('hidden');
+    document.getElementById('detailed-view').classList.add('fade-out');
     document.getElementById('detailed-view').classList.remove('visible');
     setTimeout(() => {
+        document.getElementById('detailed-view').classList.add('hidden');
         document.getElementById('basic-view').classList.remove('hidden');
-        document.getElementById('basic-view').classList.add('visible');
+        document.getElementById('basic-view').classList.add('fade-in');
     }, 1000);
 });
 
@@ -31,7 +34,7 @@ function createSnowflake() {
 
     setTimeout(() => {
         snowflake.remove();
-    }, parseFloat(fallDuration) * 1000); // Match duration with animation time
+    }, parseFloat(fallDuration) * 1000);
 }
 
 setInterval(createSnowflake, 200);

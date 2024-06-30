@@ -3,29 +3,11 @@ body {
     font-family: Arial, sans-serif;
     background-color: #121212;
     color: #fff;
-    overflow: hidden;
-    position: relative;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.container {
-    text-align: center;
-    padding: 40px 20px;
-    background: rgba(30, 30, 30, 0.8);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 3s ease, transform 3s ease;
-    max-width: 600px;
-    margin: 20px auto;
-    z-index: 10;
-    position: relative;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    overflow: hidden;
 }
 
 #basic-view {
@@ -39,29 +21,26 @@ body {
 }
 
 #detailed-view {
-    max-width: 600px;
+    max-width: 800px;
     margin: 20px auto;
+    padding: 20px;
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.container {
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 
 .container.visible {
     opacity: 1;
-    transform: scale(1);
 }
 
 .hidden {
     display: none;
-}
-
-.wave {
-    animation: wave-animation 2s;
-    display: inline-block;
-}
-
-@keyframes wave-animation {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(20deg); }
-    50% { transform: rotate(-20deg); }
-    75% { transform: rotate(20deg); }
 }
 
 #expand-button, #collapse-button {
@@ -75,11 +54,17 @@ body {
     border: 2px solid #666;
     border-radius: 10px;
     transition: all 0.3s ease;
-    font-family: Arial, sans-serif;
     text-align: center;
     line-height: 50px;
     font-size: 18px;
-    position: relative;
+}
+
+#expand-button::after, #collapse-button::after {
+    content: 'Advanced View';
+}
+
+#expand-button:hover, #collapse-button:hover {
+    background-color: #333;
 }
 
 .skills-tools-container {
@@ -145,4 +130,14 @@ body {
 .project.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease;
 }
