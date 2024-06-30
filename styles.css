@@ -39,20 +39,16 @@ body {
     position: fixed;
     top: -10px;
     color: var(--snow-color, #fff);
+    font-size: 1em;
     user-select: none;
     pointer-events: none;
     z-index: 1000;
-    animation: fall linear infinite, rotate linear infinite;
+    animation: fall linear infinite;
 }
 
 @keyframes fall {
     0% { transform: translateY(-10px); }
     100% { transform: translateY(100vh); }
-}
-
-@keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
 }
 
 .project {

@@ -17,16 +17,12 @@ function createSnowflake() {
     snowflake.classList.add('snowflake');
     snowflake.textContent = '❄';
 
-    // Set random size
-    const size = Math.random() * 0.5 + 0.5 + 'em';
-    snowflake.style.fontSize = size;
-
     // Set random horizontal position
     snowflake.style.left = Math.random() * window.innerWidth + 'px';
 
     // Set random duration for fall animation
-    const fallDuration = Math.random() * 3 + 7 + 's';
-    snowflake.style.animationDuration = fallDuration + ', ' + (Math.random() * 5 + 5) + 's';
+    const fallDuration = Math.random() * 3 + 2 + 's';
+    snowflake.style.animationDuration = fallDuration;
 
     document.body.appendChild(snowflake);
 
