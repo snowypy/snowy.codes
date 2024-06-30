@@ -3,8 +3,12 @@ body {
     font-family: Arial, sans-serif;
     background-color: #121212;
     color: #fff;
-    overflow: auto;
+    overflow: hidden;
     position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -22,6 +26,21 @@ body {
     position: relative;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+}
+
+#basic-view {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#detailed-view {
+    max-width: 600px;
+    margin: 20px auto;
 }
 
 .container.visible {
