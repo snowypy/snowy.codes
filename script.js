@@ -17,12 +17,12 @@ function createSnowflake() {
     snowflake.classList.add('snowflake');
     snowflake.textContent = '❄';
     snowflake.style.left = Math.random() * window.innerWidth + 'px';
-    snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+    snowflake.style.animationDuration = Math.random() * 3 + 7 + 's'; // Longer duration for smoother fall
     document.body.appendChild(snowflake);
     
     setTimeout(() => {
         snowflake.remove();
-    }, 5000);
+    }, 10000); // Ensure to Match duration with animation time
 }
 
 setInterval(createSnowflake, 200);
@@ -63,4 +63,3 @@ const observer = new IntersectionObserver(entries => {
 projectElements.forEach(element => {
     observer.observe(element);
 });
-

@@ -38,16 +38,17 @@ body {
 .snowflake {
     position: fixed;
     top: -10px;
-    color: #fff;
-    font-size: 1em;
+    color: var(--snow-color, #fff);
+    font-size: var(--snow-size, 1em);
     user-select: none;
     pointer-events: none;
     z-index: 1000;
+    animation: snow 10s linear infinite;
 }
 
-.snowflake {
-    color: var(--snow-color, #fff);
-    font-size: var(--snow-size, 1em);
+@keyframes snow {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
 }
 
 body {
@@ -63,10 +64,4 @@ body {
 .project.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-
-@keyframes snow {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(100vh); }
 }
