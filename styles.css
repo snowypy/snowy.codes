@@ -19,7 +19,7 @@ body {
     max-width: 600px;
     margin: 20px auto;
     z-index: 10;
-    position: relative;
+    position: relative; 
 }
 
 .container.visible {
@@ -32,12 +32,15 @@ body {
 }
 
 .wave {
-    animation: wave-animation 2s infinite;
+    animation: wave-animation 2s;
+    display: inline-block;
 }
 
 @keyframes wave-animation {
     0%, 100% { transform: rotate(0deg); }
-    50% { transform: rotate(20deg); }
+    25% { transform: rotate(20deg); }
+    50% { transform: rotate(-20deg); }
+    75% { transform: rotate(20deg); }
 }
 
 #expand-button, #collapse-button {
