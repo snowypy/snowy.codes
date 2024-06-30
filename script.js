@@ -44,21 +44,24 @@ const projects = [
         description: 'The best freemium plugins available for free on BuiltByBit!',
         technologies: 'Spigot Library, Java, Kotlin, NodeJS',
         link: 'https://discord.gg/epicplugins',
-        image: 'path/to/image.png'
+        image: 'path/to/image.png',
+        role: 'Plugin Developer'
     },
     {
         name: 'DupeCrush',
         description: 'A lifestyle dupe Minecraft server coded in Java, Kotlin, and Skript.',
         technologies: 'Java, Kotlin, Skript',
         link: 'https://discord.gg/dupecrush',
-        image: 'path/to/image.png'
+        image: 'path/to/image.png',
+        role: 'Lead Developer'
     },
     {
         name: 'MineCrush',
         description: 'A Minecraft network with various frameworks.',
         technologies: 'Kotlin, JavaScript, Node.js, Gradle',
         link: 'https://discord.gg/minecrush',
-        image: 'path/to/image.png'
+        image: 'path/to/image.png',
+        role: 'Community Manager'
     }
 ];
 
@@ -69,7 +72,7 @@ projects.forEach((project, index) => {
     projectElement.innerHTML = `
         <div class="project-icon" style="background-image: url('${project.image}')"></div>
         <div class="project-content">
-            <h3>0${index + 1}. ${project.name} <a href="${project.link}" target="_blank" class="project-link">@${project.name}</a></h3>
+            <h3>0${index + 1}. ${project.role} <a href="${project.link}" target="_blank" class="project-link">@${project.name}</a></h3>
             <p>${project.description}</p>
             <p><strong>Technologies:</strong> ${project.technologies}</p>
         </div>
