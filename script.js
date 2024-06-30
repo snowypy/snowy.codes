@@ -72,7 +72,7 @@ projects.forEach((project, index) => {
     projectElement.innerHTML = `
         <div class="project-icon" style="background-image: url('${project.image}')"></div>
         <div class="project-content">
-            <h3>${index + 1}. ${project.name} <a href="${project.link}" target="_blank" class="underline">@${project.name}</a></h3>
+            <h3>0${index + 1}. ${project.name} <a href="${project.link}" target="_blank" class="underline">@${project.name}</a></h3>
             <p>${project.description}</p>
             <p><strong>Technologies:</strong> ${project.technologies}</p>
         </div>

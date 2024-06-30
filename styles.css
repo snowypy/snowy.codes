@@ -192,13 +192,13 @@ body {
 }
 
 .project-content a {
-    color: #aaa;
+    color: #317ff5;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 1s ease;
 }
 
 .project-content a:hover {
-    color: #ff6600;  /* Example color for hover state */
+    color: #00ff73;  /* Example color for hover state */
 }
 
 .project-content a.underline:hover {
