@@ -38,6 +38,8 @@ document.addEventListener('visibilitychange', () => {
     }
 });
 
+
+
 const projects = [
     {
         name: 'Epic Plugins',

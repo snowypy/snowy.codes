@@ -1,3 +1,4 @@
+/* Define softer gradients */
 :root {
     --primary-color: #ff6600;
     --secondary-color: #aaa;
@@ -5,8 +6,18 @@
     --container-bg-color: rgba(18, 18, 18, 0.8);
     --content-bg-color: rgba(30, 30, 30, 0.9);
     --icon-bg-color: rgba(40, 40, 40, 0.9);
+    --react-gradient: linear-gradient(45deg, #61dafb, #21a1f1);
+    --java-gradient: linear-gradient(45deg, #007396, #5382a1);
+    --kotlin-gradient: linear-gradient(45deg, #7f52ff, #0a74da);
+    --skript-gradient: linear-gradient(45deg, #fbb034, #ffdd00);
+    --html-gradient: linear-gradient(45deg, #e34f26, #ef652a);
+    --redis-gradient: linear-gradient(45deg, #e97c7c, #f82b5f);
+    --nginx-gradient: linear-gradient(45deg, #4eaa25, #89e051);
+    --nodejs-gradient: linear-gradient(45deg, #339933, #68a063);
+    --mongodb-gradient: linear-gradient(45deg, #47a248, #68b84c);
 }
 
+/* Global styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -84,17 +95,78 @@ body {
     margin-top: 10px;
 }
 
+/* Update icon styles to include softer gradients and logos */
 .icon {
-    background: var(--icon-bg-color);
-    padding: 10px;
-    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
     margin: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, border-image 0.3s ease; /* Added border-image transition */
+    border-radius: 8px; /* Adjusted border-radius for slightly rounded corners */
+    overflow: hidden; /* Ensure the icon does not overflow */
 }
 
 .icon:hover {
     transform: scale(1.1);
+}
+
+/* Specific gradient border with slightly rounded corners */
+.icon.react { 
+    border: 2px solid transparent;
+    border-image: var(--react-gradient) 1; 
+}
+.icon.java { 
+    border: 2px solid transparent;
+    border-image: var(--java-gradient) 1; 
+}
+.icon.kotlin { 
+    border: 2px solid transparent;
+    border-image: var(--kotlin-gradient) 1; 
+}
+.icon.skript { 
+    border: 2px solid transparent;
+    border-image: var(--skript-gradient) 1; 
+}
+.icon.html { 
+    border: 2px solid transparent;
+    border-image: var(--html-gradient) 1; 
+}
+.icon.redis { 
+    border: 2px solid transparent;
+    border-image: var(--php-gradient) 1; 
+}
+.icon.nginx { 
+    border: 2px solid transparent;
+    border-image: var(--bash-gradient) 1; 
+}
+.icon.nodejs { 
+    border: 2px solid transparent;
+    border-image: var(--nodejs-gradient) 1; 
+}
+.icon.mongodb { 
+    border: 2px solid transparent;
+    border-image: var(--mongodb-gradient) 1; 
+}
+
+/* Styles for the logos */
+.icon img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px; /* Space between the image and text */
+}
+
+/* Adjust flex direction for proper text alignment */
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.icon span {
+    margin-left: 10px;
 }
 
 .projects {
