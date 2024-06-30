@@ -42,10 +42,10 @@ body {
     user-select: none;
     pointer-events: none;
     z-index: 1000;
-    animation: snow var(--fall-duration, 10s) linear infinite, rotate var(--rotate-duration, 10s) linear infinite;
+    animation: fall linear infinite, rotate linear infinite;
 }
 
-@keyframes snow {
+@keyframes fall {
     0% { transform: translateY(-10px); }
     100% { transform: translateY(100vh); }
 }
