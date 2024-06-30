@@ -4,6 +4,7 @@ body {
     background-color: var(--background-color, #121212);
     color: #fff;
     overflow: hidden;
+    position: relative; /* Add this to create a stacking context */
 }
 
 .container {
@@ -17,6 +18,8 @@ body {
     transition: opacity 3s ease, transform 3s ease;
     max-width: 600px;
     margin: 20px auto;
+    z-index: 10;
+    position: relative;
 }
 
 .container.visible {
@@ -63,7 +66,7 @@ body {
     font-size: 1em;
     user-select: none;
     pointer-events: none;
-    z-index: 1000;
+    z-index: 5;
     animation: fall linear infinite;
 }
 
