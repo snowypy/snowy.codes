@@ -44,24 +44,43 @@ const projects = [
     {
         name: 'Epic Plugins',
         description: 'The best freemium plugins available for free on BuiltByBit!',
-        technologies: 'Spigot Library, Java, Kotlin, NodeJS'
+        technologies: 'Spigot Library, Java, Kotlin, NodeJS',
+        link: 'https://discord.gg/epicplugins',
+        image: '/mnt/data/image.png'
     },
+    {
+        name: 'DupeCrush',
+        description: 'A lifestyle dupe Minecraft server coded in Java, Kotlin, and Skript.',
+        technologies: 'Java, Kotlin, Skript',
+        link: 'https://discord.gg/dupecrush',
+        image: '/mnt/data/image.png'
+    },
+    {
+        name: 'MineCrush',
+        description: 'A Minecraft network with various frameworks.',
+        technologies: 'Kotlin, JavaScript, Node.js, Gradle',
+        link: 'https://discord.gg/minecrush',
+        image: '/mnt/data/image.png'
+    }
 ];
 
 const projectsContainer = document.querySelector('.projects');
 
-projects.forEach(project => {
+projects.forEach((project, index) => {
     const projectElement = document.createElement('div');
-    projectElement.classList.add('project');
+    projectElement.classList.add('project-item');
     projectElement.innerHTML = `
-        <h3>${project.name}</h3>
-        <p>${project.description}</p>
-        <p><strong>Technologies:</strong> ${project.technologies}</p>
+        <div class="project-icon" style="background-image: url('${project.image}')"></div>
+        <div class="project-content">
+            <h3>${index + 1}. ${project.name} <a href="${project.link}" target="_blank" class="underline">@${project.name}</a></h3>
+            <p>${project.description}</p>
+            <p><strong>Technologies:</strong> ${project.technologies}</p>
+        </div>
     `;
     projectsContainer.appendChild(projectElement);
 });
 
-const projectElements = document.querySelectorAll('.project');
+const projectElements = document.querySelectorAll('.project-item');
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -75,4 +94,15 @@ const observer = new IntersectionObserver(entries => {
 
 projectElements.forEach(element => {
     observer.observe(element);
+});
+
+document.querySelectorAll('.underline').forEach(anchor => {
+    anchor.addEventListener('mouseover', () => {
+        anchor.style.transition = 'all 0.3s ease';
+        anchor.style.color = '#ff6600';
+    });
+
+    anchor.addEventListener('mouseout', () => {
+        anchor.style.color = '#aaa';
+    });
 });

@@ -143,3 +143,79 @@ body {
     opacity: 0;
     transition: opacity 1s ease;
 }
+
+.project-section {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+    background: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.3s ease;
+}
+
+.project-item:last-child {
+    border-bottom: none;
+}
+
+.project-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    background: url('/mnt/data/image.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.project-content {
+    flex: 1;
+}
+
+.project-content h3 {
+    margin: 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.project-content p {
+    margin: 5px 0;
+    color: #aaa;
+}
+
+.project-content a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-content a:hover {
+    color: #ff6600;  /* Example color for hover state */
+}
+
+.project-content a.underline:hover {
+    text-decoration: underline;
+}
+
+.project-links {
+    margin-top: 10px;
+}
+
+.project-links a {
+    margin-right: 10px;
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+    color: #ff6600;  /* Example color for hover state */
+}
