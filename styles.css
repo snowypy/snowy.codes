@@ -8,8 +8,20 @@ body {
 
 .container {
     text-align: center;
-    padding: 20px;
-    transition: opacity 1s ease;
+    padding: 40px 20px;
+    background: #1e1e1e;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 3s ease, transform 3s ease;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.container.visible {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .hidden {
@@ -29,6 +41,15 @@ body {
     padding: 10px 20px;
     margin-top: 20px;
     cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#expand-button:hover, #collapse-button:hover {
+    background-color: #0056b3;
 }
 
 .skills, .projects {

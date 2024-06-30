@@ -2,13 +2,16 @@ document.getElementById('expand-button').addEventListener('click', function() {
     document.getElementById('basic-view').classList.add('hidden');
     setTimeout(() => {
         document.getElementById('detailed-view').classList.remove('hidden');
+        document.getElementById('detailed-view').classList.add('visible');
     }, 1000);
 });
 
 document.getElementById('collapse-button').addEventListener('click', function() {
     document.getElementById('detailed-view').classList.add('hidden');
+    document.getElementById('detailed-view').classList.remove('visible');
     setTimeout(() => {
         document.getElementById('basic-view').classList.remove('hidden');
+        document.getElementById('basic-view').classList.add('visible');
     }, 1000);
 });
 
