@@ -49,17 +49,20 @@ body {
     height: 50px;
     margin-top: 20px;
     cursor: pointer;
-    background-color: #007bff;
+    background-color: transparent;
     color: #fff;
-    border: none;
+    border: 2px solid #666;
     border-radius: 10px;
     transition: all 0.3s ease;
     font-family: Arial, sans-serif;
-    position: relative;
-    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
     text-align: center;
     line-height: 50px;
     font-size: 24px;
+    overflow: hidden;
 }
 
 #expand-button::before, #collapse-button::before {
@@ -79,11 +82,11 @@ body {
 }
 
 #expand-button:hover, #collapse-button:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) translateX(-50%);
 }
 
 #expand-button:hover::before, #collapse-button:hover::before {
-    opacity: 1;
+    opacity: 0;
 }
 
 #expand-button::after, #collapse-button::after {
@@ -95,10 +98,35 @@ body {
 }
 
 #expand-button:hover::after, #collapse-button:hover::after {
+    content: '';
+}
+
+#expand-button:hover::before, #collapse-button:hover::before {
     content: 'Advanced View';
+    display: block;
+    position: absolute;
+    bottom: 60px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
     font-size: 14px;
     white-space: nowrap;
-    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+#expand-button:hover::after, #collapse-button:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 50px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+    z-index: 1;
 }
 
 .skills, .projects {
