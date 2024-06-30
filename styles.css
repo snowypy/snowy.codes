@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #121212;
+    background-color: var(--background-color, #121212);
     color: #fff;
     overflow: hidden;
 }
@@ -42,7 +42,7 @@ body {
     user-select: none;
     pointer-events: none;
     z-index: 1000;
-    animation: snow linear infinite, rotate 5s linear infinite;
+    animation: snow var(--fall-duration, 10s) linear infinite, rotate var(--rotate-duration, 10s) linear infinite;
 }
 
 @keyframes snow {
@@ -53,10 +53,6 @@ body {
 @keyframes rotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-body {
-    background-color: var(--background-color, #121212);
 }
 
 .project {
