@@ -114,39 +114,39 @@ body {
 
 /* Specific gradient border with slightly rounded corners */
 .icon.react { 
-    border: 2px solid transparent;
+    border: 6px solid transparent;
     border-image: var(--react-gradient) 1; 
 }
 .icon.java { 
-    border: 2px solid transparent;
+    border: 6px solid transparent;
     border-image: var(--java-gradient) 1; 
 }
 .icon.kotlin { 
-    border: 2px solid transparent;
+    border: 6px solid transparent;
     border-image: var(--kotlin-gradient) 1; 
 }
 .icon.skript { 
-    border: 2px solid transparent;
+    border: 6px solid transparent;
     border-image: var(--skript-gradient) 1; 
 }
 .icon.html { 
-    border: 2px solid transparent;
+    border: 6px solid transparent;
     border-image: var(--html-gradient) 1; 
 }
 .icon.redis { 
-    border: 2px solid transparent;
-    border-image: var(--php-gradient) 1; 
+    border: 6px solid transparent;
+    border-image: var(--redis-gradient) 1; 
 }
 .icon.nginx { 
-    border: 2px solid transparent;
-    border-image: var(--bash-gradient) 1; 
+    border: 6px solid transparent;
+    border-image: var(--nginx-gradient) 1; 
 }
 .icon.nodejs { 
-    border: 2px solid transparent;
+    border: 6px solid transparent;
     border-image: var(--nodejs-gradient) 1; 
 }
 .icon.mongodb { 
-    border: 2px solid transparent;
+    border: 6px solid transparent;
     border-image: var(--mongodb-gradient) 1; 
 }
 
