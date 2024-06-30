@@ -16,13 +16,25 @@ function createSnowflake() {
     const snowflake = document.createElement('div');
     snowflake.classList.add('snowflake');
     snowflake.textContent = '❄';
+
+    // Set random size
+    const size = Math.random() * 0.5 + 0.5 + 'em';
+    snowflake.style.fontSize = size;
+
+    // Set random horizontal position
     snowflake.style.left = Math.random() * window.innerWidth + 'px';
-    snowflake.style.animationDuration = Math.random() * 3 + 7 + 's'; // Longer duration for smoother fall
+
+    // Set random duration for fall animation
+    snowflake.style.animationDuration = Math.random() * 3 + 7 + 's';
+
+    // Set random duration for rotation animation
+    snowflake.style.animationDuration = `${Math.random() * 3 + 2}s, ${Math.random() * 5 + 5}s`;
+
     document.body.appendChild(snowflake);
-    
+
     setTimeout(() => {
         snowflake.remove();
-    }, 10000); // Ensure to Match duration with animation time
+    }, 10000); // Match duration with animation time
 }
 
 setInterval(createSnowflake, 200);
