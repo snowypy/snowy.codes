@@ -25,16 +25,14 @@ function createSnowflake() {
     snowflake.style.left = Math.random() * window.innerWidth + 'px';
 
     // Set random duration for fall animation
-    snowflake.style.animationDuration = Math.random() * 3 + 7 + 's';
-
-    // Set random duration for rotation animation
-    snowflake.style.animationDuration = `${Math.random() * 3 + 2}s, ${Math.random() * 5 + 5}s`;
+    const fallDuration = Math.random() * 3 + 7 + 's';
+    snowflake.style.animationDuration = fallDuration + ', ' + (Math.random() * 5 + 5) + 's';
 
     document.body.appendChild(snowflake);
 
     setTimeout(() => {
         snowflake.remove();
-    }, 10000); // Match duration with animation time
+    }, parseFloat(fallDuration) * 1000); // Match duration with animation time
 }
 
 setInterval(createSnowflake, 200);

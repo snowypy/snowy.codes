@@ -42,11 +42,11 @@ body {
     user-select: none;
     pointer-events: none;
     z-index: 1000;
-    animation: snow linear infinite, rotate 5s linear infinite;
+    animation: snow linear infinite, rotate linear infinite;
 }
 
 @keyframes snow {
-    0% { transform: translateY(0); }
+    0% { transform: translateY(-10px); }
     100% { transform: translateY(100vh); }
 }
 
